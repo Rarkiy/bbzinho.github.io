@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Feliz dis dos namorados </title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    
+    h1 {
+      color: #FF0000;
+    }
+    
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      background-color: #FF0000;
+      color: #FFFFFF;
+      text-decoration: none;
+      margin: 10px;
+    }
+    
+    .btn:hover {
+      background-color: #800000;
+    }
+    
+    #response {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+    
+    #heart {
+      display: none;
+      margin-top: 20px;
+      font-size: 48px;
+      color: #FF0000;
+    }
+  </style>
+</head>
+<body>
+  <h1>Eu te amo!</h1>
+  <button class="btn" onclick="respond('Eu também te amo!')">Eu também te amo</button>
+  <button class="btn" onclick="respond('Tu me ama SIM')">Não te amo</button>
+  <div id="response"></div>
+  <div id="heart">&#10084;</div>
+  
+  <script>
+    function respond(message) {
+      var responseDiv = document.getElementById("response");
+      var heartDiv = document.getElementById("heart");
+      
+      if (message === 'TU me ama SIM') {
+        responseDiv.innerHTML = "Tu me ama SIM";
+        responseDiv.style.color = "#FF0000";
+        heartDiv.style.display = "none";
+      } else {
+        responseDiv.innerHTML = message;
+        responseDiv.style.color = "#000000";
+        heartDiv.style.display = "block";
+      }
+    }
+  </script>
+</body>
+</html>
